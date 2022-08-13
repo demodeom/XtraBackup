@@ -1,0 +1,412 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2 配置 xtrabackup.md · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.3 服务器版本与备份版本对比.html" />
+    
+    
+    <link rel="prev" href="3.1 需要的连接和权限.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.1 关于 Percona XtraBackup.html">
+            
+                <a href="1.1 关于 Percona XtraBackup.html">
+            
+                    
+                    1.1 关于 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1.2 Percona XtraBackup 如何工作.html">
+            
+                <a href="1.2 Percona XtraBackup 如何工作.html">
+            
+                    
+                    1.2 Percona XtraBackup 如何工作.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2.1 安装 Percona XtraBackup 8.0.html">
+            
+                <a href="2.1 安装 Percona XtraBackup 8.0.html">
+            
+                    
+                    2.1 安装 Percona XtraBackup 8.0.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.html">
+            
+                <a href="2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.html">
+            
+                    
+                    2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.html">
+            
+                <a href="2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.html">
+            
+                    
+                    2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2.1.3 从源代码编译和安装.html">
+            
+                <a href="2.1.3 从源代码编译和安装.html">
+            
+                    
+                    2.1.3 从源代码编译和安装.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2.1.4 在 Docker 容器中运行 Percona XtraBackup.html">
+            
+                <a href="2.1.4 在 Docker 容器中运行 Percona XtraBackup.html">
+            
+                    
+                    2.1.4 在 Docker 容器中运行 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="3.1 需要的连接和权限.html">
+            
+                <a href="3.1 需要的连接和权限.html">
+            
+                    
+                    3.1 需要的连接和权限.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="3.2 配置 xtrabackup.html">
+            
+                <a href="3.2 配置 xtrabackup.html">
+            
+                    
+                    3.2 配置 xtrabackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="3.3 服务器版本与备份版本对比.html">
+            
+                <a href="3.3 服务器版本与备份版本对比.html">
+            
+                    
+                    3.3 服务器版本与备份版本对比.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="4.1 完整备份.html">
+            
+                <a href="4.1 完整备份.html">
+            
+                    
+                    4.1 完整备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="4.2 增量备份.html">
+            
+                <a href="4.2 增量备份.html">
+            
+                    
+                    4.2 增量备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="4.3 压缩备份.html">
+            
+                <a href="4.3 压缩备份.html">
+            
+                    
+                    4.3 压缩备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2 配置 xtrabackup.md</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x914D;&#x7F6E;-xtrabackup">&#x914D;&#x7F6E; xtrabackup</h1>
+<p>&#x6240;&#x6709; xtrabackup &#x914D;&#x7F6E;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x9009;&#x9879;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x7684;&#x884C;&#x4E3A;&#x4E0E;&#x6807;&#x51C6; MySQL &#x7A0B;&#x5E8F;&#x9009;&#x9879;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF1A;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6307;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; /etc/my.cnf &#x7B49;&#x6587;&#x4EF6;&#x6307;&#x5B9A;&#x3002;</p>
+<p>xtrabackup &#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x6309;&#x987A;&#x5E8F;&#x4ECE;&#x4EFB;&#x4F55;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6; [mysqld] &#x548C; [xtrabackup] &#x90E8;&#x5206;&#x3002;&#x8FD9;&#x6837;&#x5B83;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x60A8;&#x73B0;&#x6709;&#x7684; MySQL &#x5B89;&#x88C5;&#x4E2D;&#x8BFB;&#x53D6;&#x5176;&#x9009;&#x9879;&#xFF0C;&#x4F8B;&#x5982; datadir &#x6216;&#x4E00;&#x4E9B; InnoDB &#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8986;&#x76D6;&#x8FD9;&#x4E9B;&#xFF0C;&#x53EA;&#x9700;&#x5728; [xtrabackup] &#x90E8;&#x5206;&#x6307;&#x5B9A;&#x5B83;&#x4EEC;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x7A0D;&#x540E;&#x8BFB;&#x53D6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4F1A;&#x4F18;&#x5148;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#xFF0C;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684; my.cnf &#x4E2D;&#x653E;&#x7F6E;&#x4EFB;&#x4F55;&#x914D;&#x7F6E;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E0A;&#x6307;&#x5B9A;&#x9009;&#x9879;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0;&#x5728; my.cnf &#x6587;&#x4EF6;&#x7684; [xtrabackup] &#x90E8;&#x5206;&#x4E2D;&#x653E;&#x7F6E;&#x7684;&#x552F;&#x4E00;&#x5185;&#x5BB9;&#x662F; target_dir &#x9009;&#x9879;&#xFF0C;&#x7528;&#x4E8E;&#x9ED8;&#x8BA4;&#x653E;&#x7F6E;&#x5907;&#x4EFD;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>[xtrabackup]
+target_dir = /data/backups/mysql/
+</code></pre><p>&#x672C;&#x624B;&#x518C;&#x5C06;&#x5047;&#x8BBE;&#x60A8;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x57FA;&#x4E8E;&#x6587;&#x4EF6;&#x7684; xtrabackup &#x914D;&#x7F6E;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x5C06;&#x59CB;&#x7EC8;&#x663E;&#x793A;&#x663E;&#x5F0F;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x3002;&#x6709;&#x5173;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x9009;&#x9879;&#x548C;&#x53D8;&#x91CF;&#x53C2;&#x8003;&#x3002;</p>
+<p>xtrabackup &#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x5728; my.cnf &#x6587;&#x4EF6;&#x4E2D;&#x4E0D;&#x63A5;&#x53D7;&#x4E0E; mysqld &#x670D;&#x52A1;&#x5668;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x8BED;&#x6CD5;&#x3002;&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#xFF0C;mysqld &#x670D;&#x52A1;&#x5668;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x63A5;&#x53D7;&#x5E26;&#x6709; <code>--set-variable=&lt;variable&gt;=&lt;value&gt;</code> &#x8BED;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x800C; xtrabackup &#x65E0;&#x6CD5;&#x7406;&#x89E3;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684; my.cnf &#x6587;&#x4EF6;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x914D;&#x7F6E;&#x6307;&#x4EE4;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x7528; --variable=value &#x8BED;&#x6CD5;&#x91CD;&#x5199;&#x5B83;&#x4EEC;&#x3002;</p>
+<h2 id="&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x548C;-nfs-&#x5377;">&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x548C; NFS &#x5377;</h2>
+<p>xtrabackup &#x5DE5;&#x5177;&#x5728;&#x5927;&#x591A;&#x6570;&#x7CFB;&#x7EDF;&#x4E0A;&#x4E0D;&#x9700;&#x8981;&#x7279;&#x6B8A;&#x914D;&#x7F6E;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x8C03;&#x7528; fsync() &#x65F6;&#xFF0C;--target-dir &#x6240;&#x5728;&#x7684;&#x5B58;&#x50A8;&#x5FC5;&#x987B;&#x6B63;&#x786E;&#x8FD0;&#x884C;&#x3002;&#x7279;&#x522B;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x6CE8;&#x610F;&#x5230;&#x672A;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x9009;&#x9879;&#x6302;&#x8F7D;&#x7684; NFS &#x5377;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x771F;&#x6B63;&#x540C;&#x6B65;&#x6570;&#x636E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x5907;&#x4EFD;&#x5230;&#x4F7F;&#x7528; async &#x9009;&#x9879;&#x6302;&#x8F7D;&#x7684; NFS &#x5377;&#xFF0C;&#x7136;&#x540E;&#x5C1D;&#x8BD5;&#x4ECE;&#x4E5F;&#x6302;&#x8F7D;&#x8BE5;&#x5377;&#x7684;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x51C6;&#x5907;&#x5907;&#x4EFD;&#xFF0C;&#x5219;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x770B;&#x8D77;&#x6765;&#x5DF2;&#x635F;&#x574F;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x6302;&#x8F7D;&#x9009;&#x9879;&#x6765;&#x907F;&#x514D;&#x6B64;&#x95EE;&#x9898;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.1 需要的连接和权限.html" class="navigation navigation-prev " aria-label="Previous page: 3.1 需要的连接和权限.md">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.3 服务器版本与备份版本对比.html" class="navigation navigation-next " aria-label="Next page: 3.3 服务器版本与备份版本对比.md">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2 配置 xtrabackup.md","level":"1.10","depth":1,"next":{"title":"3.3 服务器版本与备份版本对比.md","level":"1.11","depth":1,"path":"doc/3.3 服务器版本与备份版本对比.md","ref":"./doc/3.3 服务器版本与备份版本对比.md","articles":[]},"previous":{"title":"3.1 需要的连接和权限.md","level":"1.9","depth":1,"path":"doc/3.1 需要的连接和权限.md","ref":"./doc/3.1 需要的连接和权限.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/3.2 配置 xtrabackup.md","mtime":"2021-12-23T20:20:05.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-13T03:52:48.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

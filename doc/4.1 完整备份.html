@@ -1,0 +1,484 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.1 完整备份.md · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.2 增量备份.html" />
+    
+    
+    <link rel="prev" href="3.3 服务器版本与备份版本对比.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.1 关于 Percona XtraBackup.html">
+            
+                <a href="1.1 关于 Percona XtraBackup.html">
+            
+                    
+                    1.1 关于 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1.2 Percona XtraBackup 如何工作.html">
+            
+                <a href="1.2 Percona XtraBackup 如何工作.html">
+            
+                    
+                    1.2 Percona XtraBackup 如何工作.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2.1 安装 Percona XtraBackup 8.0.html">
+            
+                <a href="2.1 安装 Percona XtraBackup 8.0.html">
+            
+                    
+                    2.1 安装 Percona XtraBackup 8.0.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.html">
+            
+                <a href="2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.html">
+            
+                    
+                    2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.html">
+            
+                <a href="2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.html">
+            
+                    
+                    2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2.1.3 从源代码编译和安装.html">
+            
+                <a href="2.1.3 从源代码编译和安装.html">
+            
+                    
+                    2.1.3 从源代码编译和安装.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2.1.4 在 Docker 容器中运行 Percona XtraBackup.html">
+            
+                <a href="2.1.4 在 Docker 容器中运行 Percona XtraBackup.html">
+            
+                    
+                    2.1.4 在 Docker 容器中运行 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="3.1 需要的连接和权限.html">
+            
+                <a href="3.1 需要的连接和权限.html">
+            
+                    
+                    3.1 需要的连接和权限.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="3.2 配置 xtrabackup.html">
+            
+                <a href="3.2 配置 xtrabackup.html">
+            
+                    
+                    3.2 配置 xtrabackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="3.3 服务器版本与备份版本对比.html">
+            
+                <a href="3.3 服务器版本与备份版本对比.html">
+            
+                    
+                    3.3 服务器版本与备份版本对比.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="4.1 完整备份.html">
+            
+                <a href="4.1 完整备份.html">
+            
+                    
+                    4.1 完整备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="4.2 增量备份.html">
+            
+                <a href="4.2 增量备份.html">
+            
+                    
+                    4.2 增量备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="4.3 压缩备份.html">
+            
+                <a href="4.3 压缩备份.html">
+            
+                    
+                    4.3 压缩备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.1 完整备份.md</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x521B;&#x5EFA;&#x5907;&#x4EFD;">&#x521B;&#x5EFA;&#x5907;&#x4EFD;</h1>
+<p>&#x8981;&#x521B;&#x5EFA;&#x5907;&#x4EFD;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; --backup &#x9009;&#x9879;&#x8FD0;&#x884C; xtrabackup&#x3002;&#x60A8;&#x8FD8;&#x9700;&#x8981;&#x6307;&#x5B9A; --target-dir &#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x662F;&#x5B58;&#x50A8;&#x5907;&#x4EFD;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C; InnoDB &#x6570;&#x636E;&#x6216;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x672A;&#x5B58;&#x50A8;&#x5728;&#x540C;&#x4E00;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x8FD8;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5B83;&#x4EEC;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219; xtrabackup &#x4F1A;&#x521B;&#x5EFA;&#x5B83;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x76EE;&#x5F55;&#x786E;&#x5B9E;&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219; xtrabackup &#x5C06;&#x6210;&#x529F;&#x3002;</p>
+<p>xtrabackup &#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#x73B0;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x4F1A;&#x56E0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9519;&#x8BEF; 17&#xFF0C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x800C;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x8981;&#x542F;&#x52A8;&#x5907;&#x4EFD;&#x8FC7;&#x7A0B;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre><code>xtrabackup --backup --target-dir=/data/backups/
+</code></pre><p>&#x8FD9;&#x4F1A;&#x5C06;&#x5907;&#x4EFD;&#x5B58;&#x50A8;&#x5728; /data/backups/&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x5219;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x5C06;&#x76F8;&#x5BF9;&#x4E8E;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x5728;&#x5907;&#x4EFD;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x4F1A;&#x770B;&#x5230;&#x5927;&#x91CF;&#x663E;&#x793A;&#x6B63;&#x5728;&#x590D;&#x5236;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4EE5;&#x53CA;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7EBF;&#x7A0B;&#x53CD;&#x590D;&#x626B;&#x63CF;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5E76;&#x4ECE;&#x4E2D;&#x590D;&#x5236;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x663E;&#x793A;&#x4E86;&#x5728;&#x540E;&#x53F0;&#x626B;&#x63CF;&#x65E5;&#x5FD7;&#x7684;&#x65E5;&#x5FD7;&#x7EBF;&#x7A0B;&#xFF0C;&#x4EE5;&#x53CA;&#x5728; ibdata1 &#x6587;&#x4EF6;&#x4E0A;&#x5DE5;&#x4F5C;&#x7684;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x7EBF;&#x7A0B;&#xFF1A;</p>
+<pre><code>160906 10:19:17 Finished backing up non-InnoDB tables and files
+160906 10:19:17 Executing FLUSH NO_WRITE_TO_BINLOG ENGINE LOGS...
+xtrabackup: The latest check point (for incremental): &apos;62988944&apos;
+xtrabackup: Stopping log copying thread.
+.160906 10:19:18 &gt;&gt; log scanned up to (137343534)
+160906 10:19:18 Executing UNLOCK TABLES
+160906 10:19:18 All tables unlocked
+160906 10:19:18 Backup created in directory &apos;/data/backups/&apos;
+160906 10:19:18 [00] Writing backup-my.cnf
+160906 10:19:18 [00]        ...done
+160906 10:19:18 [00] Writing xtrabackup_info
+160906 10:19:18 [00]        ...done
+xtrabackup: Transaction log of lsn (26970807) to (137343534) was copied.
+160906 10:19:18 completed OK!
+</code></pre><p>&#x60A8;&#x5E94;&#x8BE5;&#x770B;&#x5230;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4EF6;&#x4E8B;&#x7C7B;&#x4F3C;&#x4E8E;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF0C;&#x5176;&#x4E2D; <code>&lt;LSN&gt;</code> &#x7684;&#x503C;&#x5C06;&#x662F;&#x4E00;&#x4E2A;&#x53D6;&#x51B3;&#x4E8E;&#x60A8;&#x7684;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x5B57;&#xFF1A;</p>
+<pre><code> xtrabackup: Transaction log of lsn (&lt;SLN&gt;) to (&lt;LSN&gt;) was copied.
+</code></pre><blockquote>
+<p>Note
+&#x65E5;&#x5FD7;&#x590D;&#x5236;&#x7EBF;&#x7A0B;&#x6BCF;&#x79D2;&#x68C0;&#x67E5;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x4EE5;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x4EFB;&#x4F55;&#x65B0;&#x5199;&#x5165;&#x7684;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x9700;&#x8981;&#x590D;&#x5236;&#xFF0C;&#x4F46;&#x65E5;&#x5FD7;&#x590D;&#x5236;&#x7EBF;&#x7A0B;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x8DDF;&#x4E0A;&#x5199;&#x5165;&#x7684;&#x6570;&#x91CF;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#xFF0C;&#x5F53;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x5728;&#x88AB;&#x8BFB;&#x53D6;&#x4E4B;&#x524D;&#x88AB;&#x8986;&#x76D6;&#x65F6;&#x4F1A;&#x51FA;&#x9519;&#x3002;</p>
+</blockquote>
+<p>&#x5907;&#x4EFD;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x5C06;&#x5305;&#x542B;&#x5982;&#x4E0B;&#x6587;&#x4EF6;&#xFF0C;&#x5047;&#x8BBE;&#x60A8;&#x6709;&#x4E00;&#x4E2A; InnoDB &#x8868; test.tbl1 &#x5E76;&#x4E14;&#x60A8;&#x6B63;&#x5728;&#x4F7F;&#x7528; MySQL &#x7684; innodb_file_per_table &#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>$ ls -lh /data/backups/
+total 182M
+drwx------  7 root root 4.0K Sep  6 10:19 .
+drwxrwxrwt 11 root root 4.0K Sep  6 11:05 ..
+-rw-r-----  1 root root  387 Sep  6 10:19 backup-my.cnf
+-rw-r-----  1 root root  76M Sep  6 10:19 ibdata1
+drwx------  2 root root 4.0K Sep  6 10:19 mysql
+drwx------  2 root root 4.0K Sep  6 10:19 performance_schema
+drwx------  2 root root 4.0K Sep  6 10:19 sbtest
+drwx------  2 root root 4.0K Sep  6 10:19 test
+drwx------  2 root root 4.0K Sep  6 10:19 world2
+-rw-r-----  1 root root  116 Sep  6 10:19 xtrabackup_checkpoints
+-rw-r-----  1 root root  433 Sep  6 10:19 xtrabackup_info
+-rw-r-----  1 root root 106M Sep  6 10:19 xtrabackup_logfile
+</code></pre><p>&#x5907;&#x4EFD;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x5177;&#x4F53;&#x53D6;&#x51B3;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x968F;&#x65F6;&#x53D6;&#x6D88;&#x662F;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;xtrabackup &#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x6B65;&#x662F;&#x51C6;&#x5907;&#x597D;&#x6062;&#x590D;&#x5907;&#x4EFD;&#x3002;</p>
+<h2 id="&#x51C6;&#x5907;&#x5907;&#x4EFD;">&#x51C6;&#x5907;&#x5907;&#x4EFD;</h2>
+<p>&#x7528; --backup &#x9009;&#x9879;&#x8FDB;&#x884C;&#x5907;&#x4EFD;&#x540E;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x51C6;&#x5907;&#x5B83;&#x4EE5;&#x6062;&#x590D;&#x5B83;&#x3002;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5728;&#x51C6;&#x5907;&#x597D;&#x4E4B;&#x524D;&#x4E0D;&#x662F;&#x65F6;&#x95F4;&#x70B9;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x88AB;&#x590D;&#x5236;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x65F6;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x5DF2;&#x88AB;&#x66F4;&#x6539;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x542F;&#x52A8; InnoDB&#xFF0C;&#x5B83;&#x5C06;&#x68C0;&#x6D4B;&#x635F;&#x574F;&#x5E76;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x635F;&#x574F;&#x7684;&#x6570;&#x636E;&#x4E0A;&#x8FD0;&#x884C;&#x3002; --prepare &#x6B65;&#x9AA4;&#x4F7F;&#x6587;&#x4EF6;&#x5728;&#x4E00;&#x4E2A;&#x77AC;&#x95F4;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x5B83;&#x4EEC;&#x4E0A;&#x8FD0;&#x884C; InnoDB</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x673A;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x51C6;&#x5907;&#x64CD;&#x4F5C;&#xFF1B;&#x5B83;&#x4E0D;&#x9700;&#x8981;&#x4F4D;&#x4E8E;&#x539F;&#x59CB;&#x670D;&#x52A1;&#x5668;&#x6216;&#x60A8;&#x6253;&#x7B97;&#x6062;&#x590D;&#x5230;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5907;&#x4EFD;&#x590D;&#x5236;&#x5230;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x670D;&#x52A1;&#x5668;&#x5E76;&#x5728;&#x90A3;&#x91CC;&#x51C6;&#x5907;&#x5B83;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;Percona XtraBackup 8.0 &#x53EA;&#x80FD;&#x51C6;&#x5907; MySQL 8.0&#x3001;Percona Server for MySQL 8.0 &#x548C; Percona XtraDB Cluster 8.0 &#x6570;&#x636E;&#x5E93;&#x7684;&#x5907;&#x4EFD;&#x3002;&#x4E0D;&#x652F;&#x6301; 8.0 &#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x5728;&#x51C6;&#x5907;&#x64CD;&#x4F5C;&#x671F;&#x95F4;&#xFF0C;xtrabackup &#x4F1A;&#x542F;&#x52A8;&#x4E00;&#x79CD;&#x7ECF;&#x8FC7;&#x4FEE;&#x6539;&#x7684;&#x5D4C;&#x5165;&#x5F0F; InnoDB&#xFF08;&#x94FE;&#x63A5; xtrabackup &#x7684;&#x5E93;&#xFF09;&#x3002;&#x8FD9;&#x4E9B;&#x4FEE;&#x6539;&#x5BF9;&#x4E8E;&#x7981;&#x7528; InnoDB &#x6807;&#x51C6;&#x5B89;&#x5168;&#x68C0;&#x67E5;&#x662F;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x62B1;&#x6028;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#x4E0D;&#x6B63;&#x786E;&#x3002;&#x6B64;&#x8B66;&#x544A;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x5907;&#x4EFD;&#x3002;&#x8FD9;&#x4E9B;&#x4FEE;&#x6539;&#x4EC5;&#x9002;&#x7528;&#x4E8E; xtrabackup &#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF1B;&#x60A8;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539; InnoDB &#x5373;&#x53EF;&#x4F7F;&#x7528; xtrabackup &#x8FDB;&#x884C;&#x5907;&#x4EFD;&#x3002;</p>
+<p>&#x51C6;&#x5907;&#x6B65;&#x9AA4;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x201C;&#x5D4C;&#x5165;&#x5F0F; InnoDB&#x201D;&#xFF0C;&#x4F7F;&#x7528;&#x590D;&#x5236;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5BF9;&#x590D;&#x5236;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x5D29;&#x6E83;&#x6062;&#x590D;&#x3002;&#x51C6;&#x5907;&#x6B65;&#x9AA4;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF1A;&#x60A8;&#x53EA;&#x9700;&#x4F7F;&#x7528; --prepare &#x9009;&#x9879;&#x8FD0;&#x884C; xtrabackup &#x5E76;&#x544A;&#x8BC9;&#x5B83;&#x8981;&#x51C6;&#x5907;&#x54EA;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x51C6;&#x5907;&#x5148;&#x524D;&#x6267;&#x884C;&#x7684;&#x5907;&#x4EFD;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre><code> xtrabackup --prepare --target-dir=/data/backups/
+</code></pre><p>&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x770B;&#x5230; InnoDB &#x5173;&#x95ED;&#x5E76;&#x663E;&#x793A;&#x5982;&#x4E0B;&#x6D88;&#x606F;&#xFF0C;&#x5176;&#x4E2D; LSN &#x7684;&#x503C;&#x5C06;&#x518D;&#x6B21;&#x53D6;&#x51B3;&#x4E8E;&#x60A8;&#x7684;&#x7CFB;&#x7EDF;&#xFF1A;</p>
+<pre><code>InnoDB: Shutdown completed; log sequence number 137345046
+160906 11:21:01 completed OK!
+</code></pre><p>&#x4EE5;&#x4E0B;&#x6240;&#x6709;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x90FD;&#x4E0D;&#x4F1A;&#x66F4;&#x6539;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x60A8;&#x4F1A;&#x770B;&#x5230;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>xtrabackup: This target seems to be already prepared.
+xtrabackup: notice: xtrabackup_logfile was already used to &apos;--prepare&apos;.
+</code></pre><p>&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x51C6;&#x5907;&#x5907;&#x4EFD;&#x65F6;&#x4E2D;&#x65AD; xtrabackup &#x8FDB;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x635F;&#x574F;&#xFF0C;&#x5907;&#x4EFD;&#x5C06;&#x53D8;&#x5F97;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x51C6;&#x5907;&#x8FC7;&#x7A0B;&#x4E2D;&#x65AD;&#xFF0C;&#x5219;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x5907;&#x4EFD;&#x6709;&#x6548;&#x6027;&#x3002;</p>
+<blockquote>
+<p>Note
+&#x5982;&#x679C;&#x60A8;&#x6253;&#x7B97;&#x5C06;&#x8BE5;&#x5907;&#x4EFD;&#x4F5C;&#x4E3A;&#x8FDB;&#x4E00;&#x6B65;&#x589E;&#x91CF;&#x5907;&#x4EFD;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x5219;&#x5E94;&#x5728;&#x51C6;&#x5907;&#x5907;&#x4EFD;&#x65F6;&#x4F7F;&#x7528; --apply-log-only &#x9009;&#x9879;&#xFF0C;&#x5426;&#x5219;&#x60A8;&#x5C06;&#x65E0;&#x6CD5;&#x5BF9;&#x5176;&#x5E94;&#x7528;&#x589E;&#x91CF;&#x5907;&#x4EFD;&#x3002;&#x6709;&#x5173;&#x66F4;&#x591A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x6709;&#x5173;&#x51C6;&#x5907;&#x589E;&#x91CF;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x6863;&#x3002;</p>
+</blockquote>
+<h2 id="&#x6062;&#x590D;&#x5907;&#x4EFD;">&#x6062;&#x590D;&#x5907;&#x4EFD;</h2>
+<blockquote>
+<p>Warning
+&#x5728;&#x6062;&#x590D;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x51C6;&#x5907;&#x5907;&#x4EFD;&#x3002;</p>
+</blockquote>
+<p>&#x4E3A;&#x65B9;&#x4FBF;&#x8D77;&#x89C1;&#xFF0C;xtrabackup &#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x5177;&#x6709; --copy-back &#x9009;&#x9879;&#x53EF;&#x5C06;&#x5907;&#x4EFD;&#x590D;&#x5236;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684; datadir&#xFF1A;</p>
+<pre><code> xtrabackup --copy-back --target-dir=/data/backups/
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x60F3;&#x4FDD;&#x5B58;&#x5907;&#x4EFD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; --move-back &#x9009;&#x9879;&#x5C06;&#x5907;&#x4EFD;&#x7684;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5230; datadir&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x4EFB;&#x4F55;&#x9009;&#x9879;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; rsync &#x6216; cp &#x6765;&#x6062;&#x590D;&#x6587;&#x4EF6;&#x3002;</p>
+<blockquote>
+<p>Note
+&#x5728;&#x6062;&#x590D;&#x5907;&#x4EFD;&#x4E4B;&#x524D;&#xFF0C;datadir &#x5FC5;&#x987B;&#x4E3A;&#x7A7A;&#x3002;&#x540C;&#x6837;&#x91CD;&#x8981;&#x7684;&#x662F;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x8FD8;&#x539F;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x5173;&#x95ED; MySQL &#x670D;&#x52A1;&#x5668;&#x3002;&#x60A8;&#x65E0;&#x6CD5;&#x6062;&#x590D;&#x5230;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684; mysqld &#x5B9E;&#x4F8B;&#x7684;&#x6570;&#x636E;&#x76EE;&#x5F55;&#xFF08;&#x5BFC;&#x5165;&#x90E8;&#x5206;&#x5907;&#x4EFD;&#x65F6;&#x9664;&#x5916;&#xFF09;&#x3002;</p>
+</blockquote>
+<p>&#x53EF;&#x7528;&#x4E8E;&#x6062;&#x590D;&#x5907;&#x4EFD;&#x7684; rsync &#x547D;&#x4EE4;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>rsync -avrP /data/backup/ /var/lib/mysql/
+</code></pre><p>&#x60A8;&#x5E94;&#x8BE5;&#x68C0;&#x67E5;&#x6062;&#x590D;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5177;&#x6709;&#x6B63;&#x786E;&#x7684;&#x6240;&#x6709;&#x6743;&#x548C;&#x6743;&#x9650;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5C06;&#x88AB;&#x4FDD;&#x7559;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x5728;&#x542F;&#x52A8;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x524D;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6743;&#x66F4;&#x6539;&#x4E3A; mysql&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5C06;&#x7531;&#x521B;&#x5EFA;&#x5907;&#x4EFD;&#x7684;&#x7528;&#x6237;&#x62E5;&#x6709;&#xFF1A;</p>
+<pre><code>chown -R mysql:mysql /var/lib/mysql
+</code></pre><p>&#x73B0;&#x5728;&#x6570;&#x636E;&#x5DF2;&#x6062;&#x590D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.3 服务器版本与备份版本对比.html" class="navigation navigation-prev " aria-label="Previous page: 3.3 服务器版本与备份版本对比.md">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.2 增量备份.html" class="navigation navigation-next " aria-label="Next page: 4.2 增量备份.md">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.1 完整备份.md","level":"1.12","depth":1,"next":{"title":"4.2 增量备份.md","level":"1.13","depth":1,"path":"doc/4.2 增量备份.md","ref":"./doc/4.2 增量备份.md","articles":[]},"previous":{"title":"3.3 服务器版本与备份版本对比.md","level":"1.11","depth":1,"path":"doc/3.3 服务器版本与备份版本对比.md","ref":"./doc/3.3 服务器版本与备份版本对比.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/4.1 完整备份.md","mtime":"2021-12-23T20:58:37.070Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-13T03:52:48.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

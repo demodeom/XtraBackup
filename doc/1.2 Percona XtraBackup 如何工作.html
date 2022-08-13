@@ -1,0 +1,426 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2 Percona XtraBackup 如何工作.md · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.1 安装 Percona XtraBackup 8.0.html" />
+    
+    
+    <link rel="prev" href="1.1 关于 Percona XtraBackup.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.1 关于 Percona XtraBackup.html">
+            
+                <a href="1.1 关于 Percona XtraBackup.html">
+            
+                    
+                    1.1 关于 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="1.2 Percona XtraBackup 如何工作.html">
+            
+                <a href="1.2 Percona XtraBackup 如何工作.html">
+            
+                    
+                    1.2 Percona XtraBackup 如何工作.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2.1 安装 Percona XtraBackup 8.0.html">
+            
+                <a href="2.1 安装 Percona XtraBackup 8.0.html">
+            
+                    
+                    2.1 安装 Percona XtraBackup 8.0.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.html">
+            
+                <a href="2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.html">
+            
+                    
+                    2.1.1 在 Debian 和 Ubuntu 上安装 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.html">
+            
+                <a href="2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.html">
+            
+                    
+                    2.1.2 在 Red Hat Enterprise Linux 和 CentOS 上安装 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2.1.3 从源代码编译和安装.html">
+            
+                <a href="2.1.3 从源代码编译和安装.html">
+            
+                    
+                    2.1.3 从源代码编译和安装.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2.1.4 在 Docker 容器中运行 Percona XtraBackup.html">
+            
+                <a href="2.1.4 在 Docker 容器中运行 Percona XtraBackup.html">
+            
+                    
+                    2.1.4 在 Docker 容器中运行 Percona XtraBackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="3.1 需要的连接和权限.html">
+            
+                <a href="3.1 需要的连接和权限.html">
+            
+                    
+                    3.1 需要的连接和权限.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="3.2 配置 xtrabackup.html">
+            
+                <a href="3.2 配置 xtrabackup.html">
+            
+                    
+                    3.2 配置 xtrabackup.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="3.3 服务器版本与备份版本对比.html">
+            
+                <a href="3.3 服务器版本与备份版本对比.html">
+            
+                    
+                    3.3 服务器版本与备份版本对比.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="4.1 完整备份.html">
+            
+                <a href="4.1 完整备份.html">
+            
+                    
+                    4.1 完整备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="4.2 增量备份.html">
+            
+                <a href="4.2 增量备份.html">
+            
+                    
+                    4.2 增量备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="4.3 压缩备份.html">
+            
+                <a href="4.3 压缩备份.html">
+            
+                    
+                    4.3 压缩备份.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.2 Percona XtraBackup 如何工作.md</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="percona-xtrabackup-&#x5982;&#x4F55;&#x5DE5;&#x4F5C;">Percona XtraBackup &#x5982;&#x4F55;&#x5DE5;&#x4F5C;</h1>
+<p>Percona XtraBackup &#x57FA;&#x4E8E; InnoDB &#x7684;&#x5D29;&#x6E83;&#x6062;&#x590D;&#x529F;&#x80FD;&#x3002;&#x5B83;&#x590D;&#x5236;&#x60A8;&#x7684; InnoDB &#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5728;&#x5185;&#x90E8;&#x4E0D;&#x4E00;&#x81F4;&#xFF1B;&#x4F46;&#x968F;&#x540E;&#x5B83;&#x5BF9;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x5D29;&#x6E83;&#x6062;&#x590D;&#xFF0C;&#x4F7F;&#x5B83;&#x4EEC;&#x518D;&#x6B21;&#x6210;&#x4E3A;&#x4E00;&#x81F4;&#x3001;&#x53EF;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x56E0;&#x4E3A; InnoDB &#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x91CD;&#x505A;&#x65E5;&#x5FD7;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x3002;&#x8FD9;&#x5305;&#x542B;&#x5BF9; InnoDB &#x6570;&#x636E;&#x7684;&#x6BCF;&#x6B21;&#x66F4;&#x6539;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x5F53; InnoDB &#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x68C0;&#x67E5;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x548C;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#x3002;&#x5B83;&#x5C06;&#x63D0;&#x4EA4;&#x7684;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x6761;&#x76EE;&#x5E94;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5BF9;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x4F46;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x4EFB;&#x4F55;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x64A4;&#x6D88;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>Percona XtraBackup &#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x662F;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x8BB0;&#x4F4F;&#x65E5;&#x5FD7;&#x5E8F;&#x5217;&#x53F7; (LSN)&#xFF0C;&#x7136;&#x540E;&#x590D;&#x5236;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x3002;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x66F4;&#x6539;&#xFF0C;&#x5219;&#x5B83;&#x4EEC;&#x4F1A;&#x53CA;&#x65F6;&#x53CD;&#x6620;&#x6570;&#x636E;&#x5E93;&#x5728;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x72B6;&#x6001;&#x3002;&#x540C;&#x65F6;&#xFF0C;Percona XtraBackup &#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#x6765;&#x76D1;&#x89C6;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4ECE;&#x4E2D;&#x590D;&#x5236;&#x66F4;&#x6539;&#x3002; Percona XtraBackup &#x9700;&#x8981;&#x6301;&#x7EED;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x662F;&#x4EE5;&#x5FAA;&#x73AF;&#x65B9;&#x5F0F;&#x5199;&#x5165;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x3002;&#x81EA;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EE5;&#x6765;&#xFF0C;Percona XtraBackup &#x9700;&#x8981;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x6BCF;&#x6B21;&#x66F4;&#x6539;&#x7684;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x3002;</p>
+<p>Percona XtraBackup &#x4F7F;&#x7528;&#x5907;&#x4EFD;&#x9501;&#x4F5C;&#x4E3A;<code>FLUSH TABLES WITH READ LOCK.</code> &#x7684;&#x8F7B;&#x91CF;&#x7EA7;&#x66FF;&#x4EE3;&#x54C1;&#x3002;&#x6B64;&#x529F;&#x80FD;&#x5728; Percona Server for MySQL 5.6+ &#x4E2D;&#x53EF;&#x7528;&#x3002; MySQL 8.0 &#x5141;&#x8BB8;&#x901A;&#x8FC7; <code>LOCK INSTANCE FOR BACKUP</code> &#x8BED;&#x53E5;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x7EA7;&#x5907;&#x4EFD;&#x9501;&#x3002;</p>
+<p>&#x53EA;&#x6709;&#x5728; Percona XtraBackup &#x5B8C;&#x6210;&#x5907;&#x4EFD;&#x6240;&#x6709; InnoDB/XtraDB &#x6570;&#x636E;&#x548C;&#x65E5;&#x5FD7;&#x540E;&#xFF0C;&#x624D;&#x4F1A;&#x5BF9; MyISAM &#x548C;&#x5176;&#x4ED6;&#x975E; InnoDB &#x8868;&#x8FDB;&#x884C;&#x9501;&#x5B9A;&#x3002; Percona XtraBackup &#x4F7F;&#x7528;&#x5B83;&#x81EA;&#x52A8;&#x590D;&#x5236;&#x975E; InnoDB &#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x963B;&#x585E;&#x4FEE;&#x6539; InnoDB &#x8868;&#x7684; DML &#x67E5;&#x8BE2;&#x3002;</p>
+<blockquote>
+<p>Important
+&#x8981;&#x6709;&#x6548;&#x5730;&#x4F7F;&#x7528; LOCK INSTANCE FOR BACKUP &#x6216; LOCK TABLES FOR BACKUP&#xFF0C;&#x9700;&#x8981; BACKUP_ADMIN &#x6743;&#x9650;&#x624D;&#x80FD;&#x67E5;&#x8BE2; performance_schema.log_status&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x5B9E;&#x4F8B;&#x4EC5;&#x5305;&#x542B; InnoDB &#x8868;&#x65F6;&#xFF0C;xtrabackup &#x4F1A;&#x5C1D;&#x8BD5;&#x907F;&#x514D;&#x5907;&#x4EFD;&#x9501;&#x548C; <code>FLUSH TABLES WITH READ LOCK</code>&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;xtrabackup &#x4ECE; <code>performance_schema.log_status</code> &#x83B7;&#x53D6;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x5750;&#x6807;&#x3002;&#x5F53;&#x4F7F;&#x7528; <code>--slave-info</code> &#x542F;&#x52A8; xtrabackup &#x65F6;&#xFF0C;MySQL 8.0 &#x4E2D;&#x4ECD;&#x7136;&#x9700;&#x8981; <code>FLUSH TABLES WITH READ LOCK</code>&#x3002; Percona Server for MySQL 8.0 &#x4E2D;&#x7684; log_status &#x8868;&#x88AB;&#x6269;&#x5C55;&#x4E3A;&#x5305;&#x62EC;&#x4E2D;&#x7EE7;&#x65E5;&#x5FD7;&#x5750;&#x6807;&#xFF0C;&#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x4F7F;&#x7528; <code>--slave-info</code> &#x9009;&#x9879;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x9501;&#x5B9A;&#x3002;</p>
+<p>&#x5F53;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;&#x5907;&#x4EFD;&#x9501;&#x65F6;&#xFF0C;xtrabackup &#x9996;&#x5148;&#x590D;&#x5236; InnoDB &#x6570;&#x636E;&#xFF0C;&#x8FD0;&#x884C; <code>LOCK TABLES FOR BACKUP</code>&#xFF0C;&#x7136;&#x540E;&#x590D;&#x5236; MyISAM &#x8868;&#x3002;&#x5B8C;&#x6210;&#x6B64;&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x5C06;&#x5F00;&#x59CB;&#x6587;&#x4EF6;&#x5907;&#x4EFD;&#x3002;&#x5B83;&#x5C06;&#x5907;&#x4EFD; .frm&#x3001;.MRG&#x3001;.MYD&#x3001;.MYI&#x3001;.ARM&#x3001;.ARZ&#x3001;.CSM&#x3001;.CSV&#x3001;.sdi &#x548C; .par &#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#xFF0C;xtrabackup &#x5C06;&#x4F7F;&#x7528; <code>LOCK BINLOG FOR BACKUP</code> &#x6765;&#x963B;&#x6B62;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x66F4;&#x6539;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x4F4D;&#x7F6E;&#x6216; Exec_Master_Log_Pos &#x6216; Exec_Gtid_Set&#xFF08;&#x5373;&#x5BF9;&#x5E94;&#x4E8E;&#x590D;&#x5236;&#x526F;&#x672C;&#x4E0A;&#x5F53;&#x524D; SQL &#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x7684;&#x6E90;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x5750;&#x6807;&#xFF09;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982; SHOW MASTER/SLAVE STATUS &#x62A5;&#x544A;&#x7684;&#x90A3;&#x6837;.&#x7136;&#x540E; xtrabackup &#x5C06;&#x5B8C;&#x6210;&#x590D;&#x5236; REDO &#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5E76;&#x83B7;&#x53D6;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x5750;&#x6807;&#x3002;&#x5B8C;&#x6210;&#x540E; xtrabackup &#x5C06;&#x89E3;&#x9501;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x548C;&#x8868;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x4E8C;&#x8FDB;&#x5236;&#x65E5;&#x5FD7;&#x4F4D;&#x7F6E;&#x5C06;&#x6253;&#x5370;&#x5230; STDERR&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#xFF0C;xtrabackup &#x5C06;&#x9000;&#x51FA;&#x5E76;&#x8FD4;&#x56DE; 0&#x3002;</p>
+<p>&#x6CE8;&#x610F; xtrabackup &#x7684; STDERR &#x6CA1;&#x6709;&#x5199;&#x5165;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x3002;&#x60A8;&#x5FC5;&#x987B;&#x5C06;&#x5176;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982; <code>xtrabackup OPTIONS 2&gt; backupout.log</code>&#x3002;</p>
+<p>&#x5B83;&#x8FD8;&#x5C06;&#x5728;&#x5907;&#x4EFD;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4EE5;&#x4E0B;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5728;&#x51C6;&#x5907;&#x9636;&#x6BB5;&#xFF0C;Percona XtraBackup &#x4F7F;&#x7528;&#x590D;&#x5236;&#x7684;&#x4E8B;&#x52A1;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5BF9;&#x590D;&#x5236;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x5D29;&#x6E83;&#x6062;&#x590D;&#x3002;&#x5B8C;&#x6210;&#x6B64;&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5C31;&#x53EF;&#x4EE5;&#x6062;&#x590D;&#x548C;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+<p>&#x5907;&#x4EFD;&#x7684; MyISAM &#x548C; InnoDB &#x8868;&#x6700;&#x7EC8;&#x4F1A;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x51C6;&#x5907;&#xFF08;&#x6062;&#x590D;&#xFF09;&#x8FC7;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;InnoDB &#x7684;&#x6570;&#x636E;&#x4F1A;&#x524D;&#x6EDA;&#x5230;&#x5907;&#x4EFD;&#x5B8C;&#x6210;&#x7684;&#x70B9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x56DE;&#x6EDA;&#x5230;&#x5907;&#x4EFD;&#x5B8C;&#x6210;&#x7684;&#x70B9;&#x5F00;&#x59CB;&#x4E86;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x4E0E; FLUSH TABLES WITH READ LOCK &#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x76F8;&#x5339;&#x914D;&#xFF0C;&#x56E0;&#x6B64; MyISAM &#x6570;&#x636E;&#x548C;&#x51C6;&#x5907;&#x597D;&#x7684; InnoDB &#x6570;&#x636E;&#x662F;&#x540C;&#x6B65;&#x7684;&#x3002;</p>
+<p>xtrabackup &#x63D0;&#x4F9B;&#x4E86;&#x8BB8;&#x591A;&#x5728;&#x524D;&#x9762;&#x7684;&#x89E3;&#x91CA;&#x4E2D;&#x6CA1;&#x6709;&#x63D0;&#x5230;&#x7684;&#x529F;&#x80FD;&#x3002;&#x672C;&#x624B;&#x518C;&#x4E2D;&#x66F4;&#x8BE6;&#x7EC6;&#x5730;&#x89E3;&#x91CA;&#x4E86;&#x6BCF;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x529F;&#x80FD;&#x3002;&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#x4F7F;&#x60A8;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x590D;&#x5236;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x3001;&#x590D;&#x5236;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x548C;&#x5C06;&#x65E5;&#x5FD7;&#x5E94;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x5404;&#x79CD;&#x7EC4;&#x5408;&#x6765;&#x6267;&#x884C;&#x6D41;&#x5F0F;&#x5907;&#x4EFD;&#x548C;&#x589E;&#x91CF;&#x5907;&#x4EFD;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x6062;&#x590D;&#x5907;&#x4EFD;">&#x6062;&#x590D;&#x5907;&#x4EFD;</h2>
+<p>&#x8981;&#x4F7F;&#x7528; xtrabackup &#x6062;&#x590D;&#x5907;&#x4EFD;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; --copy-back &#x6216; --move-back &#x9009;&#x9879;&#x3002;</p>
+<p>xtrabackup &#x5C06;&#x4ECE; my.cnf &#x4E2D;&#x8BFB;&#x53D6;&#x53D8;&#x91CF; datadir&#x3001;innodb_data_home_dir&#x3001;innodb_data_file_path&#x3001;innodb_log_group_home_dir &#x5E76;&#x68C0;&#x67E5;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;</p>
+<p>&#x5B83;&#x5C06;&#x9996;&#x5148;&#x590D;&#x5236; MyISAM &#x8868;&#x3001;&#x7D22;&#x5F15;&#x7B49;&#xFF08;.MRG&#x3001;.MYD&#x3001;.MYI&#x3001;.ARM&#x3001;.ARZ&#x3001;.CSM&#x3001;.CSV&#x3001;.sdi &#x548C; par &#x6587;&#x4EF6;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x662F; InnoDB &#x8868;&#x548C;&#x7D22;&#x5F15;&#x4EE5;&#x53CA;&#x65E5;&#x5FD7;&#x6700;&#x540E;&#x6587;&#x4EF6;&#x3002;&#x5B83;&#x5C06;&#x5728;&#x590D;&#x5236;&#x6587;&#x4EF6;&#x65F6;&#x4FDD;&#x7559;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728;&#x542F;&#x52A8;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x524D;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6743;&#x66F4;&#x6539;&#x4E3A; mysql&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5C06;&#x7531;&#x521B;&#x5EFA;&#x5907;&#x4EFD;&#x7684;&#x7528;&#x6237;&#x62E5;&#x6709;&#x3002;</p>
+<p>&#x6216;&#x8005;&#xFF0C;--move-back &#x9009;&#x9879;&#x53EF;&#x7528;&#x4E8E;&#x6062;&#x590D;&#x5907;&#x4EFD;&#x3002;&#x6B64;&#x9009;&#x9879;&#x4E0E; --copy-back &#x7C7B;&#x4F3C;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x662F;&#x5B83;&#x4E0D;&#x662F;&#x590D;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x5B83;&#x4EEC;&#x79FB;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x3002;&#x7531;&#x4E8E;&#x6B64;&#x9009;&#x9879;&#x4F1A;&#x5220;&#x9664;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x3002;&#x5728;&#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x53EF;&#x7528;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x6765;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x53CA;&#x5176;&#x5907;&#x4EFD;&#x526F;&#x672C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x5F88;&#x6709;&#x7528;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.1 关于 Percona XtraBackup.html" class="navigation navigation-prev " aria-label="Previous page: 1.1 关于 Percona XtraBackup.md">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.1 安装 Percona XtraBackup 8.0.html" class="navigation navigation-next " aria-label="Next page: 2.1 安装 Percona XtraBackup 8.0.md">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.2 Percona XtraBackup 如何工作.md","level":"1.3","depth":1,"next":{"title":"2.1 安装 Percona XtraBackup 8.0.md","level":"1.4","depth":1,"path":"doc/2.1 安装 Percona XtraBackup 8.0.md","ref":"./doc/2.1 安装 Percona XtraBackup 8.0.md","articles":[]},"previous":{"title":"1.1 关于 Percona XtraBackup.md","level":"1.2","depth":1,"path":"doc/1.1 关于 Percona XtraBackup.md","ref":"./doc/1.1 关于 Percona XtraBackup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/1.2 Percona XtraBackup 如何工作.md","mtime":"2021-12-20T21:27:09.689Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-13T03:52:48.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
